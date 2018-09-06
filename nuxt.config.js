@@ -1,12 +1,16 @@
+const url = require('url');
 const readMarkdownFiles = require('./scripts/markdown-files.js');
 
+const { HOST = '/_nuxt/', BASE = '' } = process.env;
+const _BASE = BASE ? `/${ BASE }/` : '';
 const globalRoutes = [];
 
 module.exports = {
   srcDir: './example',
   build: {
     vendor: [],
-    plugins: []
+    plugins: [],
+    publicPath: url.resolve(HOST, _BASE)
   },
   head: {
     title: 'adidas YARN Design System',
@@ -21,7 +25,7 @@ module.exports = {
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: 'favicon.ico'
+        href: `${ _BASE }favicon.ico`
       }
     ]
   },
@@ -36,6 +40,7 @@ module.exports = {
     '~/plugins/i18n.js'
   ],
   router: {
+    base: _BASE,
     linkExactActiveClass: 'active',
     extendRoutes(routes) {
       routes.forEach((route) => {
