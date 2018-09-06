@@ -270,7 +270,7 @@ NOTICE: The software has been designed solely for the purpose of giving some CSS
 
 If you want to contact adidas regarding the software, you can mail us at _opensourcesoftware@adidas.com_.
 
-For further information open the [adidas terms and conditions][term-and-conditions] page.
+For further information open the [adidas terms and conditions][terms-and-conditions] page.
 
 ### License
 
@@ -287,7 +287,7 @@ For further information open the [adidas terms and conditions][term-and-conditio
 [roboto]: https://fonts.google.com/specimen/Roboto
 [roboto-mono]: https://fonts.google.com/specimen/Roboto+Mono
 [single-page-application]: https://en.wikipedia.org/wiki/Single-page_application
-[term-and-conditions]: https://github.com/adidas/adidas-contribution-guidelines/wiki/Terms-and-conditions
+[terms-and-conditions]: https://github.com/adidas/adidas-contribution-guidelines/wiki/Terms-and-conditions
 [vuejs]: https://vuejs.org/
 [webpack]: https://webpack.js.org/
 [webpack-hot-module-replacement]: https://webpack.js.org/concepts/hot-module-replacement/
