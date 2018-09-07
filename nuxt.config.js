@@ -1,8 +1,9 @@
+const path = require('path');
 const url = require('url');
 const readMarkdownFiles = require('./scripts/markdown-files.js');
 
 const { HOST = '/_nuxt/', BASE = '' } = process.env;
-const _BASE = BASE ? `/${ BASE }/` : '';
+const _BASE = BASE ? `/${ path.basename(BASE) }/` : '';
 const globalRoutes = [];
 
 module.exports = {
@@ -25,7 +26,7 @@ module.exports = {
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: `${ _BASE }favicon.ico`
+        href: path.join(_BASE, '/favicon.ico')
       }
     ]
   },
