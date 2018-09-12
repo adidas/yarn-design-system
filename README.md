@@ -128,23 +128,22 @@ The way to do it is using static CDN files or local files, to be able to point t
     - If the file is processed by `webpack`, the fonts can be pointed using: `~typeface-NAME/files/FONT-FILE`.
     ```css
     @font-face {
-    font-family: 'yarn-heading';
-    font-weight: lighter;
-    font-style: normal;
-    src: local('Poppins ExtraLight'), local('Poppins-ExtraLight'),
-      url(node_modules/typeface-poppins/files/poppins-latin-200.woff) format('woff'),
-      url(node_modules/typeface-poppins/files/poppins-latin-200.woff2) format('woff2');
-    text-transform: uppercase;
+      font-family: 'yarn-heading';
+      font-weight: 100;
+      font-style: normal;
+      src: local('Poppins ExtraLight'), local('Poppins-ExtraLight'),
+        url('node_modules/typeface-poppins/files/poppins-latin-200.woff2') format('woff2'),
+        url('node_modules/typeface-poppins/files/poppins-latin-200.woff') format('woff');
     }
 
     @font-face {
-    font-family: 'yarn-base';
-    ...
+      font-family: 'yarn-base';
+      ...
     }
 
     @font-face {
-    font-family: 'yarn-monospace';
-    ...
+      font-family: 'yarn-monospace';
+      ...
     }
     ```
 
