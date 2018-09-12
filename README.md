@@ -24,8 +24,7 @@ Currently **YARN** has two different views:
 
 The purpose of this library is to provide CSS classes to customize frontend applications with adidas style.
 
-The package provides the compiled code in CSS format, as well as the source code in LESS format. Both can be
-used to customize the style of any frontend application, without being compiled, respectively.
+The package provides the compiled code in CSS format, as well as the source code in LESS format. Both can be used to customize the style of any frontend application, without being compiled, respectively.
 
 The list of use cases is endless, so, some of them could be:
 
@@ -39,8 +38,7 @@ adidas is not responsible for the usage of this software for different purposes 
 
 [NodeJS and NPM][node] are required to work with the repository.
 
-Ther are no runtime dependencies, because, despite the fact that this library is based on Bootstrap, the source
-code has been compiled along with Bootstrap.
+Ther are no runtime dependencies, because, despite the fact that this library is based on Bootstrap, the source code has been compiled along with Bootstrap.
 
 On the other hand, the use can redefine the fonts to be displayed, read [font definitions](#font-definitions) section.
 
@@ -117,11 +115,9 @@ There are several ways to define the **YARN** fonts:
 
 #### Specific fonts
 
-Working with more than one font in **YARN** requires not only to download the font definitions but to
-map those definitions to the **YARN** fonts.
+Working with more than one font in **YARN** requires not only to download the font definitions but to map those definitions to the **YARN** fonts.
 
-The way to do it is using static CDN files or local files, to be able to point to them in a
-safe way. [GitHub][open-source-typefaces] (via NPM) provides a lot of open source typefaces (MIT license) which can be loaded as local files in `woff` and `woff2` formats, which are compatible with modern browsers.
+The way to do it is using static CDN files or local files, to be able to point to them in a safe way. [GitHub][open-source-typefaces] (via NPM) provides a lot of open source typefaces (MIT license) which can be loaded as local files in `woff` and `woff2` formats, which are compatible with modern browsers.
 
 1. Fonts installation:
     ```
@@ -211,8 +207,7 @@ HOST=//name.domain:port BASE=app npm run doc
 
 ## Development
 
-The script to develop this project have to be executed in different terminals because they have to be
-continuously running checking changes.
+The script to develop this project have to be executed in different terminals because they have to be continuously running checking changes.
 
 - Library:
     ```
@@ -225,21 +220,18 @@ continuously running checking changes.
 
 Once the library is ready, and the example has been built, the application is ready in localhost: `http://localhost:3000`.
 
-The scripts are waiting for changes in the source code to rebuild the library and the example. Each time
-a change is ready, the browser will update the page without reloading it, using [Hot Module Replacement][webpack-hot-module-replacement].
+The scripts are waiting for changes in the source code to rebuild the library and the example. Each time a change is ready, the browser will update the page without reloading it, using [Hot Module Replacement][webpack-hot-module-replacement].
 
 ### Working with the library
 
-The library source code is inside the `src` folder, with LESS and JS files and some assets. The LESS code
-is divided in:
+The library source code is inside the `src` folder, with LESS and JS files and some assets. The LESS code is divided in:
 
 - Basics: basic CSS components.
 - Components: complex CSS components.
 - Mixins: functions to provide some custom CSS based on input parameters.
 - Variables: the list of variables used in the source code as well as colors and typography.
 
-Everything is imported from the main `yarn.less` file (icons and logos from `yarn-icon.less` and
-`yarn-logo.less` respectively).
+Everything is imported from the main `yarn.less` file (icons and logos from `yarn-icon.less` and `yarn-logo.less` respectively).
 
 ### Style Guide
 
@@ -251,8 +243,7 @@ Every component has its own LESS file and the names follow `kebab-case` format.
 
 #### Class naming
 
-The LESS/CSS files follow the [BEM][bem] methodology identifying the **B**lock, **E**lement and
-**M**odifier key elements and then inserting them into the HTML DOM.
+The LESS/CSS files follow the [BEM][bem] methodology identifying the **B**lock, **E**lement and **M**odifier key elements and then inserting them into the HTML DOM.
 
 Classes should have meaningful and self explanatory names, using `kebab-case` format.
 
@@ -260,19 +251,15 @@ BEM strict naming rules can be found in [BEM naming][bem-naming] document.
 
 ### Working with the example
 
-The example code has been written using [Nuxt][nuxt], which is the Server Side Rendering framework
-of [Vue.JS][vuejs].
+The example code has been written using [Nuxt][nuxt], which is the Server Side Rendering framework of [Vue.JS][vuejs].
 
 The code is located in the `example` folder and follows the Nuxt guidelines.
 
-The texts and documents are located in `example/locales` to be able to show the page in different
-languages. The `.md` files contain the content of full pages, while the `[lang].json` files have only
-titles and common words.
+The texts and documents are located in `example/locales` to be able to show the page in different languages. The `.md` files contain the content of full pages, while the `[lang].json` files have only titles and common words.
 
 ### Code linting
 
-The LESS and the Vue source code are linted using the adidas [stylelint][stylelint] and
-[ESLint][eslint] linter configurations respectively.
+The LESS and the Vue source code are linted using the adidas [stylelint][stylelint] and [ESLint][eslint] linter configurations respectively.
 
 There are separated scripts to lint the different sources and a global one to execute all together:
 

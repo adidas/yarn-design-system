@@ -1,9 +1,6 @@
 ## what does yarn mean for a designer?
 
-Following **YARN** guidelines ensures a consistent look and feel when designing across platforms. **YARN**
-enables designers to focus more of their time on the user experience by using pre-designed components.
-Designers can refer to **YARN** when creating new components or adjust existing ones to fit the needs of
-the app.
+Following **YARN** guidelines ensures a consistent look and feel when designing across platforms. **YARN** enables designers to focus more of their time on the user experience by using pre-designed components. Designers can refer to **YARN** when creating new components or adjust existing ones to fit the needs of the app.
 
 ## setup
 
@@ -16,5 +13,4 @@ the app.
 
 ## releases
 
-The **YARN** Design System is getting better and better. We track all release updates in our change log. So
-check back frequently.
+The **YARN** Design System is getting better and better. We track all release updates in our change log. So check back frequently.
