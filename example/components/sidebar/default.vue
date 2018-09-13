@@ -4,18 +4,21 @@
         open: $store.state.sidebarOpen,
         closed: !$store.state.sidebarOpen
       }">
-    <div class="sidebar__block">
-      <div class="panel-group" id="sidebarLinks" aria-multiselectable="true">
+    <div class="sidebar__main">
+      <div class="panel-group">
         <template v-for="route in routes">
           <panel-tab v-if="route.children"
               :key="route.name"
-              :name="`sidebar${ route.name }`"
-              parent="#sidebarLinks">
-            <nuxt-link class="panel-title__title link label" :to="{ name: route.name }" slot="tabTitle">
+              :name="`sidebar${ route.name }`">
+            <nuxt-link class="panel-title__title link label"
+                :to="{ name: route.name }"
+                slot="tabTitle">
               {{ $t(`views.${ route.name }.name`) }}
             </nuxt-link>
             <ul class="list-group list-group--vertical" slot="tabContent">
-              <li class="list-group-item list-group-item-light" v-for="subroute in route.children" :key="subroute.name">
+              <li class="list-group-item list-group-item-light"
+                  v-for="subroute in route.children"
+                  :key="subroute.name">
                 <nuxt-link class="link label" :to="{ name: subroute.name }">
                   {{ $t(`views.${ subroute.name }.name`) }}
                 </nuxt-link>
@@ -23,7 +26,9 @@
             </ul>
           </panel-tab>
           <panel-item v-else :key="route.name">
-            <nuxt-link class="link label" :to="{ name: route.name }">{{ $t(`views.${ route.name }.name`) }}</nuxt-link>
+            <nuxt-link class="link label" :to="{ name: route.name }">
+              {{ $t(`views.${ route.name }.name`) }}
+            </nuxt-link>
           </panel-item>
         </template>
       </div>
