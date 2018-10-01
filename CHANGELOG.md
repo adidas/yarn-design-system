@@ -1,3 +1,11 @@
+# 1.2.0
+
+### [ logos ]
+
+- Renamed logos:
+  - `yarn-logo adidas` -> `yarn-logo yarn-logo--adidas`.
+  - `yarn-logo yarn` -> `yarn-logo yarn-logo--yarn`.
+
 # 1.1.0
 
 - Added mobile view for the main layout.
