@@ -6,6 +6,11 @@
   - `yarn-logo adidas` -> `yarn-logo yarn-logo--adidas`.
   - `yarn-logo yarn` -> `yarn-logo yarn-logo--yarn`.
 
+### [ variables ]
+
+- Fixed values.
+- Added `@font-size-x-small` and `@font-size-x-large`.
+
 # 1.1.0
 
 - Added mobile view for the main layout.
