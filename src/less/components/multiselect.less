@@ -1,0 +1,186 @@
+.multiselect {
+  @input-height: @input-height-base;
+  @list-item-height: @input-height-base - .5rem;
+  @list-max-visible-items: 5;
+  @list-max-height: @list-item-height * @list-max-visible-items;
+  @list-dropdown-button-width: 1rem;
+
+  &[type=single] {
+    .choices .choices__inner .choices__list.choices__list--single .choices__item {
+      border: none;
+      color: @input-color;
+      width: calc(100% ~'-' @list-dropdown-button-width);
+      position: relative;
+
+      .choices__button {
+        color: @primary-darkgray;
+        margin-top: -@padding-small-vertical;
+        position: absolute;
+
+        &:hover {
+          color: @red-100;
+        }
+      }
+    }
+  }
+
+  .choices {
+    font-size: @font-size-small;
+
+    &[data-type*=select-one]:after {
+      border-color: @primary-darkgray fade(@primary-black, 0) fade(@primary-black, 0);
+      border-width: .25rem;
+      margin-top: unset;
+      right: .5rem;
+    }
+
+    .choices__inner {
+      background-color: @input-bg;
+      border: 1px solid @input-border;
+      border-radius: @input-border-radius;
+      font-size: inherit;
+      color: @input-color;
+      padding: @padding-small-vertical;
+      height: @input-height;
+      min-height: auto;
+      .flex(row);
+
+      &:hover {
+        @media @pointer-query {
+          box-shadow: @shadow-outset;
+        }
+      }
+
+      .choices__list {
+        display: inline-block;
+
+        .choices__item {
+          background-color: @primary-white;
+          border: 1px solid @blue-100;
+          border-radius: 0;
+          color: @blue-100;
+          font-size: inherit;
+          font-weight: 400;
+          line-height: 1;
+          padding: @padding-small-vertical;
+          margin: 0 @padding-base-horizontal @padding-base-horizontal 0;
+          display: inline-block;
+          position: relative;
+
+          &.is-highlighted {
+            color: @red-100;
+            border-color: @red-100;
+          }
+
+          .choices__button {
+            background: none;
+            border: none;
+            font-size: 0;
+            text-indent: unset;
+            line-height: inherit;
+            padding: 0;
+            width: auto;
+            margin: auto;
+            display: inherit;
+            opacity: unset;
+
+            &:hover {
+              color: @red-100;
+            }
+
+            &:after {
+              content: '\e92c';
+              font-family: @icon-font-name;
+              font-size: @font-size-small;
+              font-weight: bold;
+              line-height: .5;
+              margin-left: @padding-base-horizontal;
+              position: relative;
+              top: @padding-xs-vertical;
+            }
+          }
+        }
+
+        &.choices__list--single {
+          padding: 0;
+
+          .choices__item {
+            width: auto;
+
+            .choices__button {
+              border-radius: @input-border-radius;
+              height: unset;
+              position: inherit;
+            }
+          }
+        }
+      }
+    }
+
+    .choices__input {
+      background-color: @input-bg;
+      font-size: @font-size-small;
+      padding: @padding-small-vertical 0 @padding-small-vertical @padding-xs-horizontal;
+      margin-bottom: 0;
+
+      &::placeholder {
+        color: @primary-gray;
+        font-style: italic;
+      }
+    }
+
+    .choices__list {
+      max-height: @list-max-height;
+
+      &.choices__list--dropdown {
+        border-radius: @input-border-radius;
+        color: @primary-darkgray;
+
+        &.is-active {
+          border-top-color: @blue-100;
+        }
+
+        > .choices__item {
+          font-style: italic;
+        }
+
+        .choices__input {
+          padding-left: @padding-base-horizontal;
+        }
+
+        .choices__item {
+          font-size: inherit;
+          padding: @padding-xs-vertical @padding-base-horizontal;
+          height: @list-item-height;
+
+          &.choices__item--selectable {
+            &.is-highlighted {
+              background-color: @blue-20;
+
+              &:after {
+                font-size: @font-size-x-small;
+                font-style: italic;
+                opacity: .75;
+              }
+            }
+          }
+
+          &.choices__item--disabled {
+            color: @primary-gray;
+            opacity: 1;
+          }
+
+          &.has-no-results {
+            padding: @padding-small-vertical 0 @padding-small-vertical @padding-base-horizontal;
+          }
+        }
+      }
+    }
+
+    &.is-focused {
+      .choices__inner {
+        border-color: @input-border-focus;
+      }
+    }
+  }
+}

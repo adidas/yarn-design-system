@@ -1,5 +1,6 @@
 # 1.2.0
 
+- Added `multiselect` less component.
 - Added `choicesjs-stencil` libraary as dependency for multiselects.
 
 ### [ logos ]
@@ -7,6 +8,10 @@
 - Renamed logos:
   - `yarn-logo adidas` -> `yarn-logo yarn-logo--adidas`.
   - `yarn-logo yarn` -> `yarn-logo yarn-logo--yarn`.
+
+### [ multiselect ]
+
+- Added `.multiselect` class to customize `choicesjs-stencil` web component with YARN style.
 
 ### [ palette ]
 
