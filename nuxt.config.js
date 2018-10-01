@@ -38,7 +38,6 @@ module.exports = {
     '~/styles/style.less'
   ],
   plugins: [
-    '~/plugins/bootstrap.js',
     '~/plugins/i18n.js',
     '~/plugins/window.js'
   ],
