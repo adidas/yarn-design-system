@@ -6,6 +6,14 @@
   - `yarn-logo adidas` -> `yarn-logo yarn-logo--adidas`.
   - `yarn-logo yarn` -> `yarn-logo yarn-logo--yarn`.
 
+### [ palette ]
+
+- Added classes to set the `border-color`.
+- Renamed classes according to their variable names for `color` and `background-color`:
+  - `--black` to `--primary-black`.
+  - `--silver` to `--primary-silver`.
+  - `--white` to `--primary-white`.
+
 ### [ variables ]
 
 - Fixed values.
