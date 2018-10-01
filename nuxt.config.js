@@ -1,5 +1,6 @@
 const path = require('path');
 const url = require('url');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const readMarkdownFiles = require('./scripts/markdown-files.js');
 const readStyleVariables = require('./scripts/style-files.js');
 
@@ -10,8 +11,8 @@ const globalRoutes = [];
 module.exports = {
   srcDir: './example',
   build: {
-    vendor: [],
-    plugins: [],
+    vendor: [ 'choicesjs-stencil' ],
+    plugins: [ new CopyWebpackPlugin([{ from: './node_modules/choicesjs-stencil/dist', to: './' }]) ],
     publicPath: url.resolve(HOST, _BASE)
   },
   head: {
@@ -39,6 +40,7 @@ module.exports = {
   ],
   plugins: [
     '~/plugins/i18n.js',
+    '~/plugins/vendor.js',
     '~/plugins/window.js'
   ],
   router: {

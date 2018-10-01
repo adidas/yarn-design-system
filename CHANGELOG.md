@@ -1,5 +1,7 @@
 # 1.2.0
 
+- Added `choicesjs-stencil` libraary as dependency for multiselects.
+
 ### [ logos ]
 
 - Renamed logos:
