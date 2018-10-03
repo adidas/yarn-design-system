@@ -2,6 +2,7 @@
 
 - Added `multiselect` less component.
 - Added `choicesjs-stencil` library as dependency for multiselect components.
+- Renamed `HOST` env variable to `HOSTNAME` in order not to overwrite it.
 - Updated example.
 
 ### [ logos ]
