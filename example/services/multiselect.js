@@ -24,9 +24,8 @@ function createRemoveButton(label, visible, $t) {
     : '';
 }
 
-export function createChoiceTemplate(template, config, choices) {
+export function createChoiceTemplate(template, { classNames, itemSelectText }, choices) {
   return (data) => {
-    const { classNames, itemSelectText } = config;
     const _data = getChoiceData(data, choices);
     const icon = createIcon(_data.icon, _data.color);
 
@@ -47,9 +46,8 @@ export function createChoiceTemplate(template, config, choices) {
   };
 }
 
-export function createItemTemplate(template, config, choices, $t) {
+export function createItemTemplate(template, { classNames, removeItemButton }, choices, $t) {
   return (data) => {
-    const { classNames, removeItemButton } = config;
     const _data = getChoiceData(data, choices);
     const icon = createIcon(_data.icon, _data.color);
     const button = createRemoveButton(_data.label, removeItemButton, $t);

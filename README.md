@@ -11,7 +11,7 @@
 - Footer: it is shown fixed at the bottom of the screen.
 - Main container: it fits the available screen between the header/tabbar/toolbar and the footer. It is the only container which should be able to scroll.
 
-**YARN** is based on [Bootstrap v3][bootstrap], which is a front-end framework used to define HTML elements like grids, typography, inputs and other  interface components, as well as optional JS extensions.
+**YARN** is based on [Bootstrap v3][bootstrap], which is a front-end framework used to define HTML elements like grids, typography, inputs and other interface components, as well as optional JS extensions.
 
 Currently **YARN** has two different views based on the default font size of `16px`.
 

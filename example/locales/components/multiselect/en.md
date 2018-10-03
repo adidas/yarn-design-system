@@ -52,6 +52,6 @@ Most of the elements can be created using the method `.callbackOnCreateTemplates
 [choicesjs]: https://github.com/jshjohnson/Choices
 [choicesjs-stencil]: https://adidas.github.io/choicesjs-stencil/
 [choicesjs-templates]: https://www.npmjs.com/package/choices.js#callbackoncreatetemplates
-[choicesjs-templates-elements]: https://github.com/jshjohnson/Choices/blob/master/assets/scripts/src/choices.js#L2463-L2701
+[choicesjs-templates-elements]: https://github.com/jshjohnson/Choices/blob/394bde313d0f8a50b4c2b9d64d35b76ded68a515/assets/scripts/src/choices.js#L2463-L2701
 [framework-integration]: https://stenciljs.com/docs/overview/
 [stenciljs]: https://stenciljs.com/
