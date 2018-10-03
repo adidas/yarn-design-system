@@ -38,10 +38,18 @@
         </div>
       </div>
     </section>
+    <section class="section">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <markdown-renderer type="url" :src="'components.multiselect'"/>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
+import markdownRenderer from '~/components/markdown/renderer';
 import { createChoiceTemplate, createItemTemplate } from '~/services/multiselect';
 
 const choices = [
@@ -102,6 +110,9 @@ export default {
         maxItemCount
       });
     });
+  },
+  components: {
+    markdownRenderer
   }
 };
 </script>
