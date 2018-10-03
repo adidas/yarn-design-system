@@ -1,26 +1,14 @@
 .multiselect {
   @input-height: @input-height-base;
   @list-item-height: @input-height-base - .5rem;
+  @list-item-highlighted-color: @red-100;
   @list-max-visible-items: 5;
   @list-max-height: @list-item-height * @list-max-visible-items;
-  @list-dropdown-button-width: 1rem;
+  @list-dropdown-button-width: 1.5rem;
 
-  &[type=single] {
-    .choices .choices__inner .choices__list.choices__list--single .choices__item {
-      border: none;
-      color: @input-color;
-      width: calc(100% ~'-' @list-dropdown-button-width);
-      position: relative;
-
-      .choices__button {
-        color: @primary-darkgray;
-        margin-top: -@padding-small-vertical;
-        position: absolute;
-
-        &:hover {
-          color: @red-100;
-        }
-      }
+  &.multiline {
+    .choices .choices__inner {
+      height: auto;
     }
   }
 
@@ -34,15 +22,31 @@
       right: .5rem;
     }
 
+    &.is-focused {
+      .choices__inner {
+        border-color: @input-border-focus;
+      }
+    }
+
+    .yarn-icon {
+      font-size: 0;
+      margin-right: @padding-base-horizontal + @font-size-large;
+
+      &:before {
+        font-size: @font-size-large;
+        position: absolute;
+        top: 0;
+      }
+    }
+
     .choices__inner {
       background-color: @input-bg;
       border: 1px solid @input-border;
       border-radius: @input-border-radius;
       font-size: inherit;
       color: @input-color;
-      padding: @padding-small-vertical;
-      height: @input-height;
-      min-height: auto;
+      padding: @padding-small-vertical 0 0 0;
+      min-height: @input-height;
       .flex(row);
 
       &:hover {
@@ -61,31 +65,35 @@
           color: @blue-100;
           font-size: inherit;
           font-weight: 400;
-          line-height: 1;
+          line-height: .875;
           padding: @padding-small-vertical;
-          margin: 0 @padding-base-horizontal @padding-base-horizontal 0;
+          margin: 0 0 @padding-small-vertical @padding-small-horizontal;
           display: inline-block;
           position: relative;
 
           &.is-highlighted {
-            color: @red-100;
-            border-color: @red-100;
+            color: @list-item-highlighted-color;
+            border-color: @list-item-highlighted-color;
+
+            .yarn-icon {
+              color: @list-item-highlighted-color !important;
+            }
           }
 
           .choices__button {
             background: none;
             border: none;
             font-size: 0;
-            text-indent: unset;
+            text-indent: 0;
             line-height: inherit;
             padding: 0;
             width: auto;
             margin: auto;
             display: inherit;
-            opacity: unset;
+            opacity: 1;
 
             &:hover {
-              color: @red-100;
+              color: @list-item-highlighted-color;
             }
 
             &:after {
@@ -105,12 +113,20 @@
           padding: 0;
 
           .choices__item {
-            width: auto;
+            border: none;
+            color: @input-color;
+            margin-top: @padding-xs-vertical;
+            width: calc(100% ~'-' @list-dropdown-button-width);
+            position: relative;
 
             .choices__button {
               border-radius: @input-border-radius;
-              height: unset;
-              position: inherit;
+              color: @primary-darkgray;
+              top: 0;
+
+              &:hover {
+                color: @list-item-highlighted-color;
+              }
             }
           }
         }
@@ -120,8 +136,9 @@
     .choices__input {
       background-color: @input-bg;
       font-size: @font-size-small;
-      padding: @padding-small-vertical 0 @padding-small-vertical @padding-xs-horizontal;
+      padding: @padding-small-vertical 0 @padding-small-vertical @padding-base-horizontal;
       margin-bottom: 0;
+      height: @font-size-large;
 
       &::placeholder {
         color: @primary-gray;
@@ -144,8 +161,13 @@
           font-style: italic;
         }
 
+        .yarn-icon:before {
+          top: @padding-xs-vertical;
+        }
+
         .choices__input {
           padding-left: @padding-base-horizontal;
+          height: auto;
         }
 
         .choices__item {
@@ -174,12 +196,6 @@
             padding: @padding-small-vertical 0 @padding-small-vertical @padding-base-horizontal;
           }
         }
-      }
-    }
-
-    &.is-focused {
-      .choices__inner {
-        border-color: @input-border-focus;
       }
     }
   }
