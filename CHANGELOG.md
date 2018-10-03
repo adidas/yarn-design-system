@@ -1,7 +1,8 @@
 # 1.2.0
 
 - Added `multiselect` less component.
-- Added `choicesjs-stencil` libraary as dependency for multiselects.
+- Added `choicesjs-stencil` library as dependency for multiselect components.
+- Updated example.
 
 ### [ logos ]
 
@@ -25,6 +26,10 @@
 
 - Fixed values.
 - Added `@font-size-x-small` and `@font-size-x-large`.
+
+### [ example ]
+
+- Added multiselect component page.
 
 # 1.1.0
 
