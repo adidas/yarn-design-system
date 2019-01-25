@@ -53,21 +53,21 @@
               </label>
             </div>
             <div class="col-xs-12 col-sm-6">
-                <label class="control control--checkmark disabled background-color--yellow-20">
-                  <input class="control__input" type="checkbox" disabled="disabled"/>
-                  <span class="control__indicator control__indicator--checkmark">
-                    <span class="yarn-icon yarn-icon--checkmark"></span>
-                  </span>
-                  <span class="control__label">{{ $t('common.unchecked') }} ({{ $t('common.disabled') }})</span>
-                </label>
-                <label class="control control--checkmark disabled background-color--orange-20">
-                  <input class="control__input" type="checkbox" disabled="disabled" checked="checked"/>
-                  <span class="control__indicator control__indicator--checkmark">
-                    <span class="yarn-icon yarn-icon--checkmark"></span>
-                  </span>
-                  <span class="control__label">{{ $t('common.checked') }} ({{ $t('common.disabled') }})</span>
-                </label>
-              </div>
+              <label class="control control--checkmark disabled background-color--yellow-20">
+                <input class="control__input" type="checkbox" disabled="disabled"/>
+                <span class="control__indicator control__indicator--checkmark">
+                  <span class="yarn-icon yarn-icon--checkmark"></span>
+                </span>
+                <span class="control__label">{{ $t('common.unchecked') }} ({{ $t('common.disabled') }})</span>
+              </label>
+              <label class="control control--checkmark disabled background-color--orange-20">
+                <input class="control__input" type="checkbox" disabled="disabled" checked="checked"/>
+                <span class="control__indicator control__indicator--checkmark">
+                  <span class="yarn-icon yarn-icon--checkmark"></span>
+                </span>
+                <span class="control__label">{{ $t('common.checked') }} ({{ $t('common.disabled') }})</span>
+              </label>
+            </div>
           </form>
         </section>
       </div>
